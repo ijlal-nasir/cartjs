@@ -49,8 +49,6 @@ $(document).on('click', '.addToCart', function () {
 	const productID = $(this).data('product-id');
 	const cartProduct = products.find((p) => p.id === productID);
 	if (cartProduct) {
-		// const exists = checkIfExists(cartProduct, cart);
-		// if (!exists) cart.push(cartProduct);
 		cart.push(cartProduct);
 	}
 	cartWrapper.html(cart.map((item) => `<div>${item.title} - Rs. ${item.price}</div>`));
